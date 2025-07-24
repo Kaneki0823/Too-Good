@@ -65,7 +65,6 @@ const lyrics = [
 
 // === PERSONAL MESSAGES (Center) ===
 const messages = [
- const lyrics = [
   { time: 0,    text: "This is for you, Rain." },
   { time: 2,    text: "Inspired by “Too Good to Say Goodbye” by Bruno Mars." },
   { time: 5,    text: "No excuses. No pressure. Just my heart." },
