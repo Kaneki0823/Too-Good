@@ -1,55 +1,69 @@
-const playBtn = document.getElementById("play-btn");
+const audio = document.getElementById("audio");
 const landing = document.getElementById("landing");
-const mainContent = document.getElementById("main-content");
-const song = document.getElementById("song");
-const subtitle = document.getElementById("subtitle");
-const centerMessage = document.getElementById("center-message");
+const main = document.getElementById("main");
+const playBtn = document.getElementById("playBtn");
+const message = document.getElementById("message");
+const lyrics = document.getElementById("lyrics");
 
-// Lyrics and messages (example, add your full synced data)
-const timeline = [
-  { time: 1, lyric: "Too good to say goodbye", message: "Rain, listen closely…" },
-  { time: 5, lyric: "Don't want to say goodbye", message: "This song holds everything I couldn’t say." },
-  { time: 10, lyric: "But I guess we ran out of time", message: "Each line is a piece of how I felt." },
+// Replace with your actual timestamps and lyrics
+const lyricsData = [
+  { time: 3, text: "Too good to say goodbye..." },
+  { time: 10, text: "I know you're thinking..." },
+  { time: 18, text: "But every time you hurt me..." },
+  { time: 26, text: "I tried, I tried..." }
 ];
 
-playBtn.addEventListener("click", () => {
-  song.play().then(() => {
+// Replace with your custom message lines
+const messageData = [
+  { time: 5, text: "Rain, I know it's hard to say goodbye..." },
+  { time: 12, text: "But this isn't goodbye, it's love lingering..." },
+  { time: 20, text: "You were never alone, not even now." },
+  { time: 28, text: "—Kei" }
+];
+
+playBtn.addEventListener("click", async () => {
+  try {
+    await audio.play();
+
+    // Fade out landing
     landing.classList.add("fade-out");
-    
     setTimeout(() => {
       landing.classList.add("hidden");
-      mainContent.classList.remove("hidden");
+      main.classList.remove("hidden");
     }, 1000);
-  }).catch((err) => {
-    alert("Audio playback failed. Click again or check permissions.");
-    console.error(err);
-  });
-});
-
-// Lyric & message handling
-song.addEventListener("timeupdate", () => {
-  const current = song.currentTime;
-  for (let i = timeline.length - 1; i >= 0; i--) {
-    if (current >= timeline[i].time) {
-      showLine(timeline[i]);
-      break;
-    }
+  } catch (err) {
+    alert("Playback failed. Try clicking again or check browser autoplay settings.");
   }
 });
 
-let lastShown = null;
-function showLine({ lyric, message }) {
-  if (lastShown === lyric) return;
-  lastShown = lyric;
+audio.addEventListener("timeupdate", () => {
+  const currentTime = audio.currentTime;
 
-  // Fade lyric
-  subtitle.style.opacity = 0;
-  centerMessage.style.opacity = 0;
+  // Show lyrics
+  const currentLyric = lyricsData.find(
+    (line, i) =>
+      currentTime >= line.time &&
+      (i === lyricsData.length - 1 || currentTime < lyricsData[i + 1].time)
+  );
 
-  setTimeout(() => {
-    subtitle.textContent = lyric;
-    centerMessage.textContent = message;
-    subtitle.style.opacity = 1;
-    centerMessage.style.opacity = 1;
-  }, 300);
-}
+  if (currentLyric) {
+    lyrics.textContent = currentLyric.text;
+    lyrics.style.opacity = 1;
+  } else {
+    lyrics.style.opacity = 0;
+  }
+
+  // Show message
+  const currentMessage = messageData.find(
+    (line, i) =>
+      currentTime >= line.time &&
+      (i === messageData.length - 1 || currentTime < messageData[i + 1].time)
+  );
+
+  if (currentMessage) {
+    message.textContent = currentMessage.text;
+    message.style.opacity = 1;
+  } else {
+    message.style.opacity = 0;
+  }
+});
