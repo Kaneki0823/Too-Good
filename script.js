@@ -65,39 +65,64 @@ const lyrics = [
 
 // === PERSONAL MESSAGES (Center) ===
 const messages = [
-  { time: 0, text: "For Rain, the One I Was Meant to Wait For." },
-  { time: 22, text: "Inspired by 'Turning Page' - Sleeping at Last." },
-  { time: 46, text: "A love that only God could write." },
-  { time: 56, text: "Maybe I never really Understood what waiting meant." },
-  { time: 62, text: "Until I met you." },
-  { time: 72, text: "Waiting isn't about the time." },
-  { time: 77, text: "It's about the faith." },
-  { time: 82, text: "It's the quiet belief that even if the world turns its back, my heart won't." },
-  { time: 92, text: "Because Rain, I'd wait every lifetime over if it means." },
-  { time: 99, text: "I'd find you again." },
-  { time: 105, text: "There was a time we were just two names drifting in the same place." },
-  { time: 115, text: "But He must've whispered your name into my prayers long before I ever said it out loud." },
-  { time: 125, text: "You were meant to come back." },
-  { time: 130, text: "Not when it was easy." },
-  { time: 135, text: "But when it was real." },
-  { time: 145, text: "I never knew I could love someone this gently." },
-  { time: 150, text: "This deeply." },
-  { time: 155, text: "Loving you doesn't ask to be loud." },
-  { time: 160, text: "It just asks to stay." },
-  { time: 165, text: "So Rain, even when you feel uncertain, or like you're not worth it." },
-  { time: 175, text: "Know that every breathe I take for you is one of promise." },
-  { time: 185, text: "No scripts, no cue lines, just us and the story." },
-  { time: 190, text: "That writes itself between silence and sighs." },
-  { time: 195, text: "You are the book I never want to close." },
-  { time: 200, text: "The page I turn with both hands gently." },
-  { time: 205, text: "Because this isn't just a chapter." },
-  { time: 210, text: "It's every page I've ever longed to read." },
-  { time: 220, text: "'Therefore what God has joined together, let no one seperate' - Mark 10:9." },
-  { time: 230, text: "Because I believe in the story He's writing. He wrote your name besides mine." },
-  { time: 240, text: "Forever turning each page with you." },
-  { time: 250, text: "Love." },
-  { time: 260, text: "— Kei" }
+ const lyrics = [
+  { time: 0,    text: "This is for you, Rain." },
+  { time: 2,    text: "Inspired by “Too Good to Say Goodbye” by Bruno Mars." },
+  { time: 5,    text: "No excuses. No pressure. Just my heart." },
+  { time: 8,    text: "one last time." },
+
+  { time: 14,   text: "I did. I won’t deny that." },
+  { time: 17,   text: "And I’m not here to erase what I did. I’m here to own it." },
+  { time: 20,   text: "You didn’t deserve to feel what I made you feel." },
+
+  { time: 20,   text: "You trusted me with your heart." },
+  { time: 23,   text: "I should’ve held it with both hands." },
+  { time: 25,   text: "And instead… I dropped it." },
+
+  { time: 26,   text: "And now all I can do is watch the person I love most walk away" },
+  { time: 30,   text: "not because you stopped loving me," },
+  { time: 33,   text: "but because I hurt you too deeply." },
+
+  { time: 36,   text: "If there’s even just 1% left of the Rain who once smiled because of me…" },
+  { time: 41,   text: "I’m not asking you to forget. I’m asking if I can try to be better." },
+
+  { time: 61,   text: "I replay those days again and again." },
+  { time: 65,   text: "And every time I do, I realize how much of a blessing they were" },
+  { time: 70,   text: "and how I failed to protect them." },
+
+  { time: 74,   text: "Because my love for you, Rain" },
+  { time: 77,   text: "it isn’t just love." },
+  { time: 80,   text: "It’s soul deep, raw, messy, stubborn, and still yours even after everything." },
+
+  { time: 87,   text: "And maybe this is goodbye." },
+  { time: 90,   text: "Maybe you’ve already closed the chapter." },
+  { time: 93,   text: "But if you ever find yourself rereading the pages" },
+  { time: 96,   text: "I’ll still be here." },
+
+  { time: 115,  text: "I’m not entitled to a second chance." },
+  { time: 119,  text: "But if love means anything" },
+  { time: 122,  text: "it’s trying, even if the odds are gone." },
+
+  { time: 142,  text: "I don’t want to change your mind." },
+  { time: 145,  text: "I only want you to know" },
+  { time: 148,  text: "I remember every moment you gave me." },
+  { time: 151,  text: "And I cherish them still." },
+
+  { time: 182,  text: "I blocked you thinking it was fate’s job." },
+  { time: 185,  text: "But it’s not fate’s job to love you. That’s mine." },
+  { time: 189,  text: "And I’m sorry I gave up, even for a second." },
+
+  { time: 206,  text: "Maybe nothing I do will fix this." },
+  { time: 210,  text: "But I still want to spend the rest of my days trying" },
+  { time: 214,  text: "in silence or in presence, with you or from afar." },
+
+  { time: 252,  text: "Maybe now isn’t our time." },
+  { time: 255,  text: "Maybe we aren’t meant to continue right now." },
+  { time: 258,  text: "But if the universe ever turns us around again" },
+  { time: 262,  text: "I’ll be waiting, still loving, still choosing you." },
+  { time: 267,  text: "- Kei." }
 ];
+
 
 // === SYNC FUNCTION ===
 function syncTimedContent() {
