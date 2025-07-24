@@ -120,7 +120,7 @@ const messages = [
   { time: 255,  text: "Maybe we aren’t meant to continue right now." },
   { time: 258,  text: "But if the universe ever turns us around again" },
   { time: 262,  text: "I’ll be waiting, still loving, still choosing you." },
-  { time: 267,  text: "- Kei." }
+  { time: 267,  text: "- Kei." },
 ];
 
 
