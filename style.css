@@ -1,69 +1,73 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+  color: white;
+  font-family: 'Courier New', monospace;
   height: 100vh;
-  background: radial-gradient(circle at center, #2c3e50, #000);
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Segoe UI", sans-serif;
-  color: white;
-  overflow: hidden;
+  flex-direction: column;
 }
 
 #landing {
   position: absolute;
-  background-color: rgba(0,0,0,0.8);
   width: 100%;
   height: 100%;
-  z-index: 10;
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 1s ease;
+  z-index: 10;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
 #landing.fade-out {
   opacity: 0;
 }
 
-.hidden {
+#landing.hidden {
   display: none;
 }
 
 #playBtn {
-  padding: 20px 40px;
-  font-size: 1.5rem;
-  background: #e74c3c;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background: #ff3366;
+  color: white;
   border: none;
   border-radius: 8px;
-  color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.3s ease;
 }
 
 #playBtn:hover {
-  background: #c0392b;
+  transform: scale(1.1);
 }
 
-#main {
+#content {
   text-align: center;
-  width: 90%;
+  z-index: 1;
+  padding: 1rem;
+}
+
+#subtitle {
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin-top: 3rem;
 }
 
 #message {
-  font-size: 2rem;
-  margin-bottom: 50px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-#lyrics {
-  font-size: 1.2rem;
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
-  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
