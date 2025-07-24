@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #2d2a4a, #5a4d7e, #8879a7);
+  color: white;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#landing {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#playBtn {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#playBtn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#main {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#audio {
+  display: none;
+}
+
+#message {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#lyrics {
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
