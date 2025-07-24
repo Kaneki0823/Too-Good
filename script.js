@@ -11,7 +11,6 @@ const lyrics = [
   { time: 12, text: "I let you get away..." },
   { time: 20, text: "There’s no one like you" },
   { time: 30, text: "You’re too good to say goodbye" }
-  // Add more lyrics as needed with actual timestamps
 ];
 
 const messages = [
@@ -24,9 +23,16 @@ const messages = [
 playBtn.onclick = () => {
   console.log("Play button clicked");
 
-  landing.classList.add("hidden");
-  main.classList.remove("hidden");
+  // Fade out landing screen first
+  landing.classList.add("fade-out");
 
+  // After fade completes (1s), hide it and show main
+  setTimeout(() => {
+    landing.classList.add("hidden");
+    main.classList.remove("hidden");
+  }, 1000);
+
+  // Try to play audio
   const playPromise = audio.play();
 
   if (playPromise !== undefined) {
