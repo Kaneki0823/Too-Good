@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>I'm Sorry</title>
+  <title>Too Good to Say Goodbye</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="landing">
-    <button id="playBtn">▶ Play</button>
+    <button id="playBtn">Play</button>
   </div>
-  <div id="content">
-    <p id="subtitle"></p>
-    <p id="message"></p>
+  <div id="mainContent">
+    <div id="message"></div>
+    <div id="lyrics"></div>
   </div>
-  <audio id="song" src="audio.mp3"></audio>
+
+  <audio id="bgm" preload="auto">
+    <source src="audio/too-good.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
   <script src="script.js"></script>
 </body>
 </html>
